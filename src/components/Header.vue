@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Welcome To The Virtual Harvard Art Museums</h1>
+    <div id="header">
+        <h1>The Virtual Harvard Art Museum</h1>
     </div>
 </template>
 
@@ -16,17 +16,9 @@ export default {
 
 <style scoped>
 h1 {
-  color: gainsboro;
+  color: black;
+  font-size: 50px;
+  margin-top: -35px;
 }
-/* ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-} */
+
 </style>
