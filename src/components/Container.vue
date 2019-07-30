@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="form">
+    <div class="form">
       <button v-on:click="getImages">Explore</button>
     </div>
     <div id="container">
@@ -8,8 +8,8 @@
         <img v-bind:src="image.baseimageurl" class="img" />
       </div>
       <div class="footer-btn">
-      <button class="page" v-on:click="previous">⬅ Previous</button>
-      <button class="page" v-on:click="next">Next ➡</button>
+        <button class="page" v-on:click="previous">⬅ Previous</button>
+        <button class="page" v-on:click="next">Next ➡</button>
       </div>
     </div>
   </div>
@@ -43,11 +43,11 @@ export default {
       this.fetch();
     },
     previous: function() {
-      this.page = this.page-1;
+      this.page = this.page - 1;
       this.fetch();
     },
     next: function() {
-      this.page = this.page+1;
+      this.page = this.page + 1;
       this.fetch();
     },
     filterImages: function(images) {
@@ -68,7 +68,8 @@ export default {
   justify-content: space-around;
 }
 #form {
-  display: block;
+  display:flex;
+  justify-content: space-around
 }
 button {
   height: 50px;
@@ -82,9 +83,8 @@ button {
   margin-top: 10px;
   margin: 10px;
   width: 180px;
-
 }
-.footer-btn{
+.footer-btn {
   display: block;
 }
 img {
