@@ -18,7 +18,7 @@ export default {
 h1 {
   color: black;
   font-size: 50px;
-  margin-top: -35px;
+  text-align: center
 }
 
 </style>
