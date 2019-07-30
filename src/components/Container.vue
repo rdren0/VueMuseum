@@ -1,11 +1,15 @@
 <template>
   <div>
-    <div id="form">
+    <div class="form">
       <button v-on:click="getImages">Explore</button>
     </div>
     <div id="container">
-      <div class="frame" v-for="image in images" v-bind:key="image">
-          <img v-bind:src="image.baseimageurl" class="img" />
+      <div v-for="(image, index) in images" v-bind:key="index" class="frame">
+        <img v-bind:src="image.baseimageurl" class="img" />
+      </div>
+      <div class="footer-btn">
+        <button class="page" v-on:click="previous">⬅ Previous</button>
+        <button class="page" v-on:click="next">Next ➡</button>
       </div>
     </div>
   </div>
@@ -20,23 +24,33 @@ export default {
   data() {
     return {
       images: [],
+      page: 1,
       error: ""
     };
   },
   methods: {
-    getImages: function() {
-      let page = Math.floor(Math.random() * Math.floor(300));
+    fetch: function() {
       fetch(
-        `https://api.harvardartmuseums.org/image?page=${page}&apikey=${key}`
+        `https://api.harvardartmuseums.org/image?size=12&page=${this.page}&apikey=${key}`
       )
         .then(response => response.json())
         .then(result => this.filterImages(result.records))
         .catch(error => this.error);
-      page = Math.floor(Math.random() * Math.floor(30));
     },
-    inputFetch: function() {},
+    getImages: function() {
+      let page = Math.floor(Math.random() * Math.floor(300));
+      this.page = page;
+      this.fetch();
+    },
+    previous: function() {
+      this.page = this.page - 1;
+      this.fetch();
+    },
+    next: function() {
+      this.page = this.page + 1;
+      this.fetch();
+    },
     filterImages: function(images) {
-      console.log(images);
       this.images = images;
     }
   },
@@ -54,22 +68,39 @@ export default {
   justify-content: space-around;
 }
 #form {
+  display:flex;
+  justify-content: space-around
+}
+button {
+  height: 50px;
+  border-radius: 8px;
+  margin-top: -30px;
+  background-color: #af7c49;
+  font-size: 30px;
+  border: 2px solid white;
+}
+.page {
+  margin-top: 10px;
+  margin: 10px;
+  width: 180px;
+}
+.footer-btn {
   display: block;
-  margin-bottom: 15px;
 }
 img {
-  height: 245px;
+  height: 243px;
   margin: 5px;
   width: 230px;
 }
+
 .frame {
-  background-color: #FFF;
-  border: solid 5vmin #AF7C49;
-  border-bottom-color: #AF7C49;
-  border-left-color: #AF7C49;
+  background-color: #fff;
+  border: solid 5vmin #af7c49;
+  border-bottom-color: #af7c49;
+  border-left-color: #af7c49;
   border-radius: 2px;
-  border-right-color: #A57545;
-  border-top-color: #A57545;
+  border-right-color: #a57545;
+  border-top-color: #a57545;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
     0 5px 10px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;

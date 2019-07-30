@@ -22,10 +22,13 @@ export default {
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
+}
+body{
+  background-image: url("https://images.pexels.com/photos/984541/pexels-photo-984541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: contain;
 }
 
 </style>
