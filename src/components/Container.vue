@@ -75,12 +75,17 @@ button {
   min-width: 250px;
   height: 60px;
   margin-top: -30px;
-  border: 4px solid black;
-  border-radius: 20px;
-  background-color: transparent;
-  box-shadow: 10px;
-  font-size: 40px;
-  font-weight: 600;
+  color:664d1e;
+  font-weight:bold;
+  background: #FDE08D;
+  	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+border:#8f6B29 2px solid;
+}
+button:hover{
+   cursor:pointer;
+    	background: -webkit-linear-gradient(top, #DF9F28, #FDE08D, #8f6B29);
+	background: linear-gradient(top, #DF9F28, #FDE08D, #8f6B29);
 }
 .page {
   margin-top: 10px;
