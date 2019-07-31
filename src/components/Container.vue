@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { key } from "../api/key";
+// import { key } from "../api/key";
 
 export default {
   name: "Container",
@@ -31,7 +31,7 @@ export default {
   methods: {
     fetch: function() {
       fetch(
-        `https://api.harvardartmuseums.org/image?size=10&page=${this.page}&apikey=${key}`
+        `https://api.harvardartmuseums.org/image?size=10&page=${this.page}&apikey=${process.env.VUE_APP_KEY}`
       )
         .then(response => response.json())
         .then(result => this.filterImages(result.records))
