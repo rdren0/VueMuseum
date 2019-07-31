@@ -78,7 +78,7 @@ button {
   margin-top: -30px;
   font-size: 40px;
   vertical-align: middle;
-  background: linear-gradient(213.99deg, #8F6B29 25.48%, rgba(245, 203, 83, 0.583333) 62.97%, rgba(206, 166, 67, 0.743651) 88.81%, rgba(143, 107, 41, 0.94) 96.88%);
+  background: linear-gradient(213.99deg, #8F6B29 25.48%, rgba(245, 203, 83, 0.583333) 62.97%, rgba(206, 166, 67, 0.743651) 92.9%);
   font-weight: 600;
   border: #8f6b29 2px solid;
 }
