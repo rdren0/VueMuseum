@@ -1,13 +1,6 @@
 {
   "name": "vue-the-museum",
   "version": "0.1.0",
-<<<<<<< HEAD
-  "engines": {
-    "node": "11.2.0",
-    "npm": "6.10.0"
-  },
-=======
->>>>>>> 3adbfe6b933dd3f701adef72ed60f96d72a53c56
   "private": true,
   "scripts": {
     "start": "node server.js",
@@ -17,14 +10,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-<<<<<<< HEAD
     "node": "^12.7.0",
     "vue": "^2.6.10",
     "express": "^4.17.1"
-=======
-    "node": "11.2.0",
-    "vue": "^2.6.10"
->>>>>>> 3adbfe6b933dd3f701adef72ed60f96d72a53c56
+
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
