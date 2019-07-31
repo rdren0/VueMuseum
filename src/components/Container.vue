@@ -7,10 +7,10 @@
       <div v-for="(image, index) in images" v-bind:key="index" class="frame">
         <img v-bind:src="image.baseimageurl" class="img" />
       </div>
-      <div class="footer-btn">
-        <button class="page" v-on:click="previous">⬅ Previous</button>
-        <button class="page" v-on:click="next">Next ➡</button>
-      </div>
+    </div>
+    <div class="footer-btn">
+      <button class="page" v-on:click="previous">⬅ Previous</button>
+      <button class="page" v-on:click="next">Next ➡</button>
     </div>
   </div>
 </template>
@@ -31,14 +31,14 @@ export default {
   methods: {
     fetch: function() {
       fetch(
-        `https://api.harvardartmuseums.org/image?size=12&page=${this.page}&apikey=${key}`
+        `https://api.harvardartmuseums.org/image?size=10&page=${this.page}&apikey=${key}`
       )
         .then(response => response.json())
         .then(result => this.filterImages(result.records))
         .catch(error => this.error);
     },
     getImages: function() {
-      let page = Math.floor(Math.random() * Math.floor(300));
+      let page = Math.floor(Math.random() * Math.floor(1000));
       this.page = page;
       this.fetch();
     },
@@ -68,12 +68,12 @@ export default {
   justify-content: space-around;
 }
 #form {
-  display:flex;
-  justify-content: space-around
+  display: flex;
+  justify-content: space-around;
 }
 button {
-  height: 50px;
-  border-radius: 8px;
+  height: 45px;
+  border-radius: 3px;
   margin-top: -30px;
   background-color: #af7c49;
   font-size: 30px;
@@ -88,9 +88,8 @@ button {
   display: block;
 }
 img {
-  height: 243px;
-  margin: 5px;
-  width: 230px;
+  height: 255px;
+  padding: 5px;
 }
 
 .frame {
@@ -107,7 +106,6 @@ img {
   display: inline-block;
   margin: 15px;
   height: 335px;
-  /* padding:8vmin; */
   position: relative;
   text-align: center;
 }
