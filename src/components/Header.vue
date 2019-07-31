@@ -20,6 +20,7 @@ h1 {
   font-size: 50px;
   text-align: center;
   margin-top: -5px;
+  text-decoration: underline
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="form">
-      <button v-on:click="getImages">Explore</button>
+      <button id="explore" v-on:click="getImages"> Explore</button>
     </div>
     <div id="container">
       <div v-for="(image, index) in images" v-bind:key="index" class="frame">
@@ -72,12 +72,15 @@ export default {
   justify-content: space-around;
 }
 button {
-  height: 45px;
-  border-radius: 3px;
+  min-width: 250px;
+  height: 60px;
   margin-top: -30px;
-  background-color: #af7c49;
-  font-size: 30px;
-  border: 2px solid white;
+  border: 4px solid black;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 10px;
+  font-size: 40px;
+  font-weight: 600;
 }
 .page {
   margin-top: 10px;
