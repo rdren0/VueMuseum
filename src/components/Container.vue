@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="form">
-      <button id="explore" v-on:click="getImages"> Explore</button>
+      <button id="explore" v-on:click="getImages">Explore</button>
     </div>
     <div id="container">
       <div v-for="(image, index) in images" v-bind:key="index" class="frame">
@@ -74,18 +74,16 @@ export default {
 button {
   min-width: 250px;
   height: 60px;
+  padding: 0;
   margin-top: -30px;
-  color:664d1e;
-  font-weight:bold;
-  background: #FDE08D;
-  	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
-	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
-border:#8f6B29 2px solid;
+  font-size: 30px;
+  color: #DDBC00;
+  vertical-align: middle;
+  background: black;
+  border: #8f6b29 2px solid;
 }
-button:hover{
-   cursor:pointer;
-    	background: -webkit-linear-gradient(top, #DF9F28, #FDE08D, #8f6B29);
-	background: linear-gradient(top, #DF9F28, #FDE08D, #8f6B29);
+button:hover {
+  cursor: pointer;
 }
 .page {
   margin-top: 10px;
