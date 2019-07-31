@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "node": "^12.7.0",
+    "node": "11.2.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
