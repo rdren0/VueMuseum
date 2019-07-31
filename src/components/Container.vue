@@ -94,7 +94,7 @@ button:hover {
   display: block;
 }
 img {
-  height: 255px;
+  height: 245px;
   padding: 5px;
 }
 
