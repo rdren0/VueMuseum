@@ -1,6 +1,9 @@
 {
   "name": "vue-the-museum",
   "version": "0.1.0",
+  "engines": {
+    "node": "11.2.0"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
