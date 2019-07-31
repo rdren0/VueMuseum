@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { key } from "../api/key";
 
 export default {
   name: "Container",
@@ -30,7 +31,7 @@ export default {
   methods: {
     fetch: function() {
       fetch(
-        `https://api.harvardartmuseums.org/image?size=10&page=${this.page}&apikey=${process.env.VUE_APP_KEY}`
+        `https://api.harvardartmuseums.org/image?size=10&page=${this.page}&apikey=${key}`
       )
         .then(response => response.json())
         .then(result => this.filterImages(result.records))
@@ -75,10 +76,10 @@ button {
   height: 60px;
   padding: 0;
   margin-top: -30px;
-  font-size: 30px;
-  color: #DDBC00;
+  font-size: 40px;
   vertical-align: middle;
-  background: black;
+  background: linear-gradient(213.99deg, #8F6B29 25.48%, rgba(245, 203, 83, 0.583333) 62.97%, rgba(206, 166, 67, 0.743651) 88.81%, rgba(143, 107, 41, 0.94) 96.88%);
+  font-weight: 600;
   border: #8f6b29 2px solid;
 }
 button:hover {
