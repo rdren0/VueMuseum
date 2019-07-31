@@ -2,7 +2,8 @@
   "name": "vue-the-museum",
   "version": "0.1.0",
   "engines": {
-    "node": "11.2.0"
+    "node": "^11.2.0",
+    "npm": "6.10.0"
   },
   "private": true,
   "scripts": {
