@@ -16,7 +16,7 @@
     "core-js": "^2.6.5",
     "node": "^12.7.0",
     "vue": "^2.6.10",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
